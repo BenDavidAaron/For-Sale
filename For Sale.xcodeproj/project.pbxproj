@@ -54,14 +54,46 @@
 		B50710BD1FE9876700EDE117 /* For Sale */ = {
 			isa = PBXGroup;
 			children = (
-				B50710BE1FE9876700EDE117 /* AppDelegate.swift */,
-				B50710C01FE9876700EDE117 /* ViewController.swift */,
-				B50710C21FE9876700EDE117 /* Main.storyboard */,
-				B50710C51FE9876700EDE117 /* Assets.xcassets */,
-				B50710C71FE9876700EDE117 /* LaunchScreen.storyboard */,
 				B50710CA1FE9876700EDE117 /* Info.plist */,
+				B50710D31FE987BD00EDE117 /* Model */,
+				B50710D21FE987B800EDE117 /* View */,
+				B50710D11FE987A300EDE117 /* Control */,
+				B50710D01FE9878F00EDE117 /* Service */,
 			);
 			path = "For Sale";
+			sourceTree = "<group>";
+		};
+		B50710D01FE9878F00EDE117 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B50710D11FE987A300EDE117 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				B50710BE1FE9876700EDE117 /* AppDelegate.swift */,
+				B50710C01FE9876700EDE117 /* ViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		B50710D21FE987B800EDE117 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B50710C51FE9876700EDE117 /* Assets.xcassets */,
+				B50710C21FE9876700EDE117 /* Main.storyboard */,
+				B50710C71FE9876700EDE117 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B50710D31FE987BD00EDE117 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
