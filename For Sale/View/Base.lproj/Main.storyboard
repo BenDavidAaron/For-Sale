@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,13 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pM2-df-V1P">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
-                                <color key="barTintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem title="Products" id="Rb3-Bq-5H6"/>
-                                </items>
-                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-Dc-9dC">
                                 <rect key="frame" x="0.0" y="96" width="320" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,15 +29,15 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f9o-Le-GVQ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="f9o-Le-GVQ" customClass="ProductCell" customModule="For_Sale" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="shirt-1" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-db-nyD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="102"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt-1" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-db-nyD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="110"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-Lw-ILg">
                                                     <rect key="frame" x="4" y="110" width="142" height="21"/>
@@ -70,30 +64,61 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="OTi-MI-f4u" secondAttribute="trailing" constant="4" id="5E9-xV-XLh"/>
                                             <constraint firstItem="OTi-MI-f4u" firstAttribute="leading" secondItem="f9o-Le-GVQ" secondAttribute="leading" constant="4" id="BM8-W4-Ym8"/>
+                                            <constraint firstItem="P9u-db-nyD" firstAttribute="leading" secondItem="f9o-Le-GVQ" secondAttribute="leading" id="FLF-Y1-rO0"/>
                                             <constraint firstAttribute="bottom" secondItem="F2h-Lw-ILg" secondAttribute="bottom" constant="29" id="HMn-KV-a8n"/>
+                                            <constraint firstItem="P9u-db-nyD" firstAttribute="centerX" secondItem="F2h-Lw-ILg" secondAttribute="centerX" id="HOa-H1-vQS"/>
                                             <constraint firstItem="P9u-db-nyD" firstAttribute="top" secondItem="f9o-Le-GVQ" secondAttribute="top" id="Ho1-OL-dHc"/>
                                             <constraint firstItem="OTi-MI-f4u" firstAttribute="top" secondItem="F2h-Lw-ILg" secondAttribute="bottom" id="L3O-h1-BkB"/>
                                             <constraint firstItem="F2h-Lw-ILg" firstAttribute="leading" secondItem="f9o-Le-GVQ" secondAttribute="leading" constant="4" id="M5H-iE-F3R"/>
                                             <constraint firstItem="F2h-Lw-ILg" firstAttribute="top" secondItem="P9u-db-nyD" secondAttribute="bottom" id="YYw-9o-fzI"/>
                                             <constraint firstAttribute="trailing" secondItem="F2h-Lw-ILg" secondAttribute="trailing" constant="4" id="b1O-ek-pgg"/>
-                                            <constraint firstItem="F2h-Lw-ILg" firstAttribute="top" secondItem="P9u-db-nyD" secondAttribute="bottom" constant="8" symbolic="YES" id="bO8-qj-zBp"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="OTi-MI-f4u" id="Otb-be-u2J"/>
+                                            <outlet property="titleLabel" destination="F2h-Lw-ILg" id="WhK-nA-lnK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hYg-Sl-dED"/>
+                                </connections>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pM2-df-V1P">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                <color key="barTintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Products" id="Rb3-Bq-5H6">
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="add" id="dKb-WM-Rdr">
+                                                <connections>
+                                                    <action selector="onAddTapped" destination="BYZ-38-t0r" id="2bO-bk-dN0"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="action" id="JQc-ab-E5c">
+                                                <connections>
+                                                    <action selector="onSubTapped" destination="BYZ-38-t0r" id="cD9-sq-S4I"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pM2-df-V1P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5KZ-A0-KSP"/>
                             <constraint firstItem="Pus-Dc-9dC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BLw-Hq-CN3"/>
                             <constraint firstItem="Pus-Dc-9dC" firstAttribute="top" secondItem="pM2-df-V1P" secondAttribute="bottom" id="D9d-d8-j8Q"/>
                             <constraint firstItem="pM2-df-V1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KPd-k0-UPP"/>
                             <constraint firstItem="pM2-df-V1P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ODo-bn-buk"/>
                             <constraint firstItem="Pus-Dc-9dC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QSb-WZ-74y"/>
                             <constraint firstItem="Pus-Dc-9dC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uqS-WW-hLV"/>
-                            <constraint firstItem="pM2-df-V1P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xCa-QD-Ssc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Pus-Dc-9dC" id="mUu-ge-weU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

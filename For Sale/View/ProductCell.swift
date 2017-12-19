@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProductCellTableViewCell: UITableViewCell {
+class ProductCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var priceLabel:UILabel!
     
     func configure(with product: Product) {
         titleLabel.text = product.title
-        
+        priceLabel.text = product.price()
     }
 }

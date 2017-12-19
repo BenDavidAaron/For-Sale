@@ -13,6 +13,6 @@ struct Product {
     let cost: Double
     
     func price() -> String {
-        return String(format: "$%.02f", "", cost)
+        return String(format: "$%0.2f", cost)
     }
 }
