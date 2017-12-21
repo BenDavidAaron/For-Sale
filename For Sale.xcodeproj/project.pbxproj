@@ -15,6 +15,7 @@
 		B50710D51FE99A2900EDE117 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D41FE99A2900EDE117 /* Product.swift */; };
 		B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D61FE99CE600EDE117 /* ProductCell.swift */; };
 		B50710D91FE9A93A00EDE117 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D81FE9A93A00EDE117 /* AlertService.swift */; };
+		B5213E051FEC34680040343C /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5213E041FEC34680040343C /* UNService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		B50710D41FE99A2900EDE117 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B50710D61FE99CE600EDE117 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B50710D81FE9A93A00EDE117 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		B5213E041FEC34680040343C /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
+		B5213E061FEC3D160040343C /* For Sale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "For Sale.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		B50710BD1FE9876700EDE117 /* For Sale */ = {
 			isa = PBXGroup;
 			children = (
+				B5213E061FEC3D160040343C /* For Sale.entitlements */,
 				B50710CA1FE9876700EDE117 /* Info.plist */,
 				B50710D31FE987BD00EDE117 /* Model */,
 				B50710D21FE987B800EDE117 /* View */,
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B50710D81FE9A93A00EDE117 /* AlertService.swift */,
+				B5213E041FEC34680040343C /* UNService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -138,6 +143,14 @@
 					B50710BA1FE9876600EDE117 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -177,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5213E051FEC34680040343C /* UNService.swift in Sources */,
 				B50710C11FE9876700EDE117 /* ViewController.swift in Sources */,
 				B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */,
 				B50710BF1FE9876700EDE117 /* AppDelegate.swift in Sources */,
@@ -318,11 +332,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "For Sale/For Sale.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UB4T6TFZ9;
+				DEVELOPMENT_TEAM = PJU47SA62K;
 				INFOPLIST_FILE = "For Sale/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Ben-Aaron.For-Sale";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ben-Aaron.For-Sale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,11 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "For Sale/For Sale.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UB4T6TFZ9;
+				DEVELOPMENT_TEAM = PJU47SA62K;
 				INFOPLIST_FILE = "For Sale/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Ben-Aaron.For-Sale";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ben-Aaron.For-Sale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
