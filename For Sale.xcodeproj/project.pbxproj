@@ -16,9 +16,13 @@
 		B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D61FE99CE600EDE117 /* ProductCell.swift */; };
 		B50710D91FE9A93A00EDE117 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D81FE9A93A00EDE117 /* AlertService.swift */; };
 		B5213E051FEC34680040343C /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5213E041FEC34680040343C /* UNService.swift */; };
+		B55F5B491FEF067200895757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B55F5B481FEF067100895757 /* GoogleService-Info.plist */; };
+		EEA24EE158D078645A425B24 /* Pods_For_Sale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E289CD22DB1FE203AE59BAB /* Pods_For_Sale.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4941341B70A6F81954FB0E94 /* Pods-For Sale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-For Sale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-For Sale/Pods-For Sale.debug.xcconfig"; sourceTree = "<group>"; };
+		5E289CD22DB1FE203AE59BAB /* Pods_For_Sale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_For_Sale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50710BB1FE9876700EDE117 /* For Sale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "For Sale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50710BE1FE9876700EDE117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B50710C01FE9876700EDE117 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 		B50710D81FE9A93A00EDE117 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B5213E041FEC34680040343C /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		B5213E061FEC3D160040343C /* For Sale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "For Sale.entitlements"; sourceTree = "<group>"; };
+		B55F5B481FEF067100895757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F54ABD6EF6FAB97B3D379699 /* Pods-For Sale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-For Sale.release.xcconfig"; path = "Pods/Target Support Files/Pods-For Sale/Pods-For Sale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA24EE158D078645A425B24 /* Pods_For_Sale.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A23CF45AAE4143C91C2CE43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4941341B70A6F81954FB0E94 /* Pods-For Sale.debug.xcconfig */,
+				F54ABD6EF6FAB97B3D379699 /* Pods-For Sale.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B50710B21FE9876600EDE117 = {
 			isa = PBXGroup;
 			children = (
 				B50710BD1FE9876700EDE117 /* For Sale */,
 				B50710BC1FE9876700EDE117 /* Products */,
+				9A23CF45AAE4143C91C2CE43 /* Pods */,
+				D60E17304C7294737F8B09C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +83,7 @@
 			children = (
 				B5213E061FEC3D160040343C /* For Sale.entitlements */,
 				B50710CA1FE9876700EDE117 /* Info.plist */,
+				B55F5B481FEF067100895757 /* GoogleService-Info.plist */,
 				B50710D31FE987BD00EDE117 /* Model */,
 				B50710D21FE987B800EDE117 /* View */,
 				B50710D11FE987A300EDE117 /* Control */,
@@ -110,6 +129,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D60E17304C7294737F8B09C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E289CD22DB1FE203AE59BAB /* Pods_For_Sale.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B50710CD1FE9876700EDE117 /* Build configuration list for PBXNativeTarget "For Sale" */;
 			buildPhases = (
+				6E78125775EBB1F806B41635 /* [CP] Check Pods Manifest.lock */,
 				B50710B71FE9876600EDE117 /* Sources */,
 				B50710B81FE9876600EDE117 /* Frameworks */,
 				B50710B91FE9876600EDE117 /* Resources */,
+				524E5C806D07636B9A00E17C /* [CP] Embed Pods Frameworks */,
+				6AA9E50564E8D5049550CDA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,12 +208,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50710C91FE9876700EDE117 /* LaunchScreen.storyboard in Resources */,
+				B55F5B491FEF067200895757 /* GoogleService-Info.plist in Resources */,
 				B50710C61FE9876700EDE117 /* Assets.xcassets in Resources */,
 				B50710C41FE9876700EDE117 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		524E5C806D07636B9A00E17C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-For Sale/Pods-For Sale-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-For Sale/Pods-For Sale-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AA9E50564E8D5049550CDA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-For Sale/Pods-For Sale-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E78125775EBB1F806B41635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-For Sale-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B50710B71FE9876600EDE117 /* Sources */ = {
@@ -330,6 +417,7 @@
 		};
 		B50710CE1FE9876700EDE117 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4941341B70A6F81954FB0E94 /* Pods-For Sale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "For Sale/For Sale.entitlements";
@@ -346,6 +434,7 @@
 		};
 		B50710CF1FE9876700EDE117 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54ABD6EF6FAB97B3D379699 /* Pods-For Sale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "For Sale/For Sale.entitlements";
