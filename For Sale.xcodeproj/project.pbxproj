@@ -17,6 +17,7 @@
 		B50710D91FE9A93A00EDE117 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D81FE9A93A00EDE117 /* AlertService.swift */; };
 		B5213E051FEC34680040343C /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5213E041FEC34680040343C /* UNService.swift */; };
 		B55F5B491FEF067200895757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B55F5B481FEF067100895757 /* GoogleService-Info.plist */; };
+		B55F5B4B1FEF096200895757 /* FIRDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */; };
 		EEA24EE158D078645A425B24 /* Pods_For_Sale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E289CD22DB1FE203AE59BAB /* Pods_For_Sale.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		B5213E041FEC34680040343C /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		B5213E061FEC3D160040343C /* For Sale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "For Sale.entitlements"; sourceTree = "<group>"; };
 		B55F5B481FEF067100895757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRDatabaseService.swift; sourceTree = "<group>"; };
 		F54ABD6EF6FAB97B3D379699 /* Pods-For Sale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-For Sale.release.xcconfig"; path = "Pods/Target Support Files/Pods-For Sale/Pods-For Sale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			children = (
 				B50710D81FE9A93A00EDE117 /* AlertService.swift */,
 				B5213E041FEC34680040343C /* UNService.swift */,
+				B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -225,11 +228,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-For Sale/Pods-For Sale-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5213E051FEC34680040343C /* UNService.swift in Sources */,
+				B55F5B4B1FEF096200895757 /* FIRDatabaseService.swift in Sources */,
 				B50710C11FE9876700EDE117 /* ViewController.swift in Sources */,
 				B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */,
 				B50710BF1FE9876700EDE117 /* AppDelegate.swift in Sources */,
