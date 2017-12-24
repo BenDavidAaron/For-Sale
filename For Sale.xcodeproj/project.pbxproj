@@ -16,6 +16,8 @@
 		B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D61FE99CE600EDE117 /* ProductCell.swift */; };
 		B50710D91FE9A93A00EDE117 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50710D81FE9A93A00EDE117 /* AlertService.swift */; };
 		B5213E051FEC34680040343C /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5213E041FEC34680040343C /* UNService.swift */; };
+		B55056851FEF39D4003F0841 /* ProductsSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55056841FEF39D4003F0841 /* ProductsSnapshot.swift */; };
+		B55056871FEF3D9A003F0841 /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55056861FEF3D9A003F0841 /* ProductsService.swift */; };
 		B55F5B491FEF067200895757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B55F5B481FEF067100895757 /* GoogleService-Info.plist */; };
 		B55F5B4B1FEF096200895757 /* FIRDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */; };
 		EEA24EE158D078645A425B24 /* Pods_For_Sale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E289CD22DB1FE203AE59BAB /* Pods_For_Sale.framework */; };
@@ -36,6 +38,8 @@
 		B50710D81FE9A93A00EDE117 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B5213E041FEC34680040343C /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		B5213E061FEC3D160040343C /* For Sale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "For Sale.entitlements"; sourceTree = "<group>"; };
+		B55056841FEF39D4003F0841 /* ProductsSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSnapshot.swift; sourceTree = "<group>"; };
+		B55056861FEF3D9A003F0841 /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
 		B55F5B481FEF067100895757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRDatabaseService.swift; sourceTree = "<group>"; };
 		F54ABD6EF6FAB97B3D379699 /* Pods-For Sale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-For Sale.release.xcconfig"; path = "Pods/Target Support Files/Pods-For Sale/Pods-For Sale.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				B50710D81FE9A93A00EDE117 /* AlertService.swift */,
 				B5213E041FEC34680040343C /* UNService.swift */,
 				B55F5B4A1FEF096200895757 /* FIRDatabaseService.swift */,
+				B55056861FEF3D9A003F0841 /* ProductsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B50710D41FE99A2900EDE117 /* Product.swift */,
+				B55056841FEF39D4003F0841 /* ProductsSnapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 				B50710C11FE9876700EDE117 /* ViewController.swift in Sources */,
 				B50710D71FE99CE600EDE117 /* ProductCell.swift in Sources */,
 				B50710BF1FE9876700EDE117 /* AppDelegate.swift in Sources */,
+				B55056851FEF39D4003F0841 /* ProductsSnapshot.swift in Sources */,
 				B50710D51FE99A2900EDE117 /* Product.swift in Sources */,
 				B50710D91FE9A93A00EDE117 /* AlertService.swift in Sources */,
+				B55056871FEF3D9A003F0841 /* ProductsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
